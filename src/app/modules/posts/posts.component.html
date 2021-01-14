@@ -1,0 +1,16 @@
+<div *ngIf="loading" fxFill fxLayoutAlign="center center">
+    <div [class.spinner]=true></div>
+</div>
+
+<div *ngIf="!loading">
+    <div fxFlex fxLayout="column">
+        <mat-form-field  fxLayoutAlign="center" >
+            <mat-label>Select User ID</mat-label>
+            <mat-select [(value)]="userid" (selectionChange)="setupPosts($event.value)">
+              <mat-option></mat-option>
+              <mat-option [value]="item.id" *ngFor="let item of users">{{item.id }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+        <app-tweet [user]="user" [posts]="posts"></app-tweet>
+    </div>
+</div>

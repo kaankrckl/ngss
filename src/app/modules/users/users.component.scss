@@ -1,0 +1,80 @@
+:host{
+    height: 100%;
+}
+mat-card{
+    //height: 80%;
+}
+
+.user-photo-wide{
+   // background-color: gray;
+   
+   border-right: 1px solid gray;
+}
+.user-photo-small{
+    // background-color: gray;
+    
+    border-bottom: 1px solid gray;
+ }
+
+.user-info{
+    //background-color: gray;
+    
+}
+
+
+.official{
+    //background-color: gray;
+    border-bottom: 1px solid gray;
+    padding: 10px;
+}
+
+.personal{
+    //background-color: gray;
+    padding: 10px;
+}
+
+.round-image{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.container{
+    height: auto;
+}
+
+.logo{
+    width: 65px;
+    height: 65px;
+}
+
+.widgets mat-card{
+    width: 100%;
+}
+
+.spinner {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #3498db;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.widgets{
+    padding-bottom: 40px;
+}
+

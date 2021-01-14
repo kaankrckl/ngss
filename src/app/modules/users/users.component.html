@@ -1,0 +1,23 @@
+
+<div *ngIf="loading" fxFlex fxLayoutAlign="center center">
+    <div [class.spinner]=true></div>
+</div>
+<div *ngIf="!loading" fxFlex  fxLayout="column" fxLayoutGap="20px">
+    <mat-form-field  fxLayoutAlign="center" >
+        <mat-label>Select User ID</mat-label>
+        <mat-select [(value)]="userid" (selectionChange)="getUsersInfo($event.value)">
+          <mat-option></mat-option>
+          <mat-option [value]="item.id" *ngFor="let item of users">{{item.id }}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    
+    <app-card [user]="user"></app-card>
+
+    <div class="widgets" fxLayoutGap="20px" fxLayout.lt-md="column" fxLayout="row" fxLayoutAlign="space-between center" >
+        <app-info-card fxFlex="30" title="Tweets" [data]="postCount" [imgurl]="'/assets/images/twitter.png'"></app-info-card>
+        <app-info-card fxFlex="30" title="Completed Todos" [data]="completed" [imgurl]="'/assets/images/to-do-list.png'"></app-info-card>
+        <app-info-card fxFlex="30" title="Albums" [data]="userAlbums" [imgurl]="'/assets/images/book.png'"></app-info-card>
+    </div>
+</div>
+
+  

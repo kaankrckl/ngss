@@ -1,0 +1,13 @@
+<app-header></app-header>
+
+<mat-drawer-container>
+    <mat-drawer fxFlex.gt-md="20" fxHide.lt-lg="true" mode="side" opened>
+        <app-sidebar [data]="data"></app-sidebar>
+    </mat-drawer>
+    
+    <mat-drawer-content fxFlex.lt-lg="100" fxFlex="80" fxLayout="column" fxFill fxLayoutAlign="space-between" >
+        <router-outlet></router-outlet> 
+    </mat-drawer-content>
+</mat-drawer-container>
+
+<app-footer></app-footer>

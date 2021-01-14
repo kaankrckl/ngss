@@ -1,0 +1,49 @@
+
+.user-photo-small{
+     // background-color: gray;
+     
+     border-bottom: 1px solid gray;
+     margin-bottom: 5px;
+  }
+ 
+
+.spinner {
+    border: 12px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 12px solid #3498db;
+    width: 80px;
+    height: 80px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+.widgets{
+    padding-bottom: 40px;
+}
+
+.round-image{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.official{
+    border-bottom: 1px solid gray;
+    //padding: 10px;
+    margin-bottom: 5px;
+}
+
+.user-info h4, h3{
+  font-weight: bold;
+}

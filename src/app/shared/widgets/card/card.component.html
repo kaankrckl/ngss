@@ -1,0 +1,45 @@
+<mat-card class="mat-elevation-z8 container" >
+  <div fxFlex fxLayout.lt-md="column" fxLayout="row">
+      <div fxLayoutGap="20px" fxLayout="column" fxLayoutAlign="center center" [ngClass.lt-md]="'user-photo-small'" fxFlex="40">
+          <img class="round-image" src="https://pecb.com/conferences/wp-content/uploads/2017/10/no-profile-picture-300x216.jpg" alt="Kaan Kırcaklı">
+          <h2>{{user.name}}</h2>
+          <h3>Website: {{user.website}}</h3>
+      </div>
+      <div class="user-info" fxFlex="60" fxLayout="column">
+          <div fxLayoutGap.lt-md="40px" fxFlex="50" fxLayoutAlign.lt-md="center center" class="official">
+              <h3 fxFlex.lt-md="20">Official Information</h3>
+              <div fxFlex.lt-md="80" fxLayout.lt-md="column" fxLayout="row"   fxLayoutAlign="space-around start" >
+                  <div fxFlex=20>
+                      <h4>Email</h4>
+                      <p>{{user.email}}</p>
+                  </div>
+                  <div fxFlex=20>
+                      <h4>Phone Number</h4>
+                      <p>{{user.phone}}</p>
+                  </div>
+                  <div fxFlex=40>
+                      <h4>Address</h4>
+                      <p>{{user.address.street}} {{user.address.suite}} {{user.address.city}} {{user.address.zipcode}}</p>
+                  </div>
+              </div>
+          </div>
+          <div  fxLayoutGap.lt-md="40px" fxFlex="50" fxLayout.lt-md="row"  fxLayoutAlign.lt-md="center center" class="personal">
+              <h3 fxFlex.lt-md="20">Company Information</h3>
+              <div fxFlex.lt-md="80" fxLayout.lt-md="column" fxLayout="row"  fxLayoutAlign="space-around start" >
+                  <div fxFlex=20>
+                      <h4>Company Name</h4>
+                      <p>{{user.company.name}}</p>
+                  </div>
+                  <div fxFlex=20>
+                      <h4>Catch Phrase</h4>
+                      <p>{{user.company.catchPhrase}}</p>
+                  </div>
+                  <div fxFlex=40>
+                      <h4>Buisness Solution</h4>
+                      <p>{{user.company.catchPhrase.bs}}</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</mat-card>

@@ -1,0 +1,19 @@
+<div class="container" fxLayoutAlign="center center">
+    <mat-card [ngClass.lt-sm]="'full-width'" fxLayoutGap="20px"  fxLayout="column">
+        <mat-toolbar>Login</mat-toolbar>
+        <form fxLayoutGap="20px"  fxLayoutAlign="stretch" fxLayout="column" class="form" (ngSubmit)="loginUser()">
+            <mat-form-field>
+              <input [(ngModel)]="user.un" matInput name="un" placeholder="Username" required>
+            </mat-form-field>
+            <mat-form-field>
+              <input [(ngModel)]="user.pw" name="pw"  matInput type="password" placeholder="Password" required>
+              <mat-hint *ngIf="err">{{errMessage}}</mat-hint>
+            </mat-form-field>
+            <button mat-raised-button type="submit">Login</button>
+            <p fxLayoutAlign="center center" class="mat-caption">
+              New to NGSS ? <a routerLink="/register"> Sign up Now</a>
+            </p>
+        </form>
+          
+    </mat-card>
+</div>

@@ -1,0 +1,16 @@
+<div fxFlex fxFill fxLayoutGap="20px" fxLayout="column" fxLayoutAlign="space-around center" >
+    <mat-card *ngFor="let item of posts"  class="mat-elevation-z8 container">
+        <div fxFlex fxLayout.xs="column" fxLayout ="row">
+            <div fxLayoutAlign="center center" class="img-container">
+                <img src="https://pecb.com/conferences/wp-content/uploads/2017/10/no-profile-picture-300x216.jpg" alt="Kaan Kırcaklı">
+            </div>
+            <div fxLayout="column"  fxLayoutAlign="center start">
+                <h2>{{user.name}}</h2>
+                <mat-chip-list aria-label="Fish selection">
+                    <mat-chip>#{{item.title}}</mat-chip>
+                </mat-chip-list>
+                <p>{{item.body}}</p>
+            </div>
+        </div>
+    </mat-card>
+</div>

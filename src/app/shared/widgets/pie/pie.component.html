@@ -1,0 +1,14 @@
+
+
+<mat-card>
+  <div *ngIf="!chartOptions" fxFill fxLayoutAlign="center center">
+    <div [class.spinner]=true></div>
+  </div>
+
+  <highcharts-chart *ngIf="chartOptions"
+  [Highcharts]="Highcharts"
+  [options]="chartOptions"
+
+  style="width: 100%;  display: block;"
+></highcharts-chart>
+</mat-card>
